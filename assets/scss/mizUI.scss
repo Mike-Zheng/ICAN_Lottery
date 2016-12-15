@@ -1,0 +1,399 @@
+/*! Copyright MizTech
+ *  Licensed MikeZheng
+ *  http: //mike-zheng.github.io/
+ *             _   _____         _     
+ *            (_) |_   _|       | |    
+ *   _ __ ___  _ ___| | ___  ___| |__  
+ *  | '_ ` _ \| |_  / |/ _ \/ __| '_ \ 
+ *  | | | | | | |/ /| |  __/ (__| | | |
+ *  |_| |_| |_|_/___\_/\___|\___|_| |_|
+ *                 mike-zheng.github.io
+ */
+
+@font-face {
+    font-family: 'cwTeXHei';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+    src: url(https://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'), url(https://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'), url(https://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'), url(https://fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+    //
+}
+
+// @include pc-width{}
+// @include pad-width() {}
+// @include small-pad-width() {}
+// @include phone-width() {}
+// @include box-shadow(
+//     0 1px 4px rgba(0,0,0,0.3),
+//     0 0 40px rgba(0,0,0,0.1) inset
+//  );
+// @include transition();
+$color_main: #313741;
+$color_select: #56ADFC;
+$color_meta: #292F39;
+$color_font: #8B8B91;
+$white:#FFF;
+// mikzUI
+// 2016
+//vendor
+@import "vendor/font-awesome";
+@import "vendor/flexboxgrid";
+@import "vendor/hint";
+// 函式
+@import 'libs/mixins';
+// 基本設定
+@import 'base/rwd';
+// @import 'base/page';
+// @import 'base/article';
+// 版型
+// @import 'layout/';
+// 元件
+@import 'components/component';
+body {
+    font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, "PingFang TC", "PingFang SC", "STHeiti", "微軟正黑體", "Microsoft Yahei", sans-serif;
+     overflow: hidden;
+}
+
+input,
+textarea,
+keygen,
+select,
+button {
+    font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, "PingFang TC", "PingFang SC", "STHeiti", "微軟正黑體", "Microsoft Yahei", sans-serif;
+}
+
+
+/*!
+ * MizUI v1.0.0 
+ * Copyright MizTech
+ * Licensed MikeZheng
+ * http://mike-zheng.github.io/
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+body {
+    background-color: #FFF;
+    // padding: 60px 20px;
+    font-family: "Source Sans Pro", "Open Sans", Lato, "Helvetica Neue", Helvetica, Arial, "PingFang TC", "PingFang SC", STHeiti, 微軟正黑體, "Microsoft Yahei", sans-serif;
+    margin: 0px;
+    color: #1D2229;
+    -webkit-font-smoothing: antialiased;
+    // overflow:none;
+}
+
+textarea {
+    resize: none;
+}
+
+.header {
+    -webkit-app-region: drag;
+    top: 0px;
+    position: absolute;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    .tool-bar {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .close {
+        vertical-align: middle;
+        background-color: #FF786B;
+        display: inline-block;
+        border-radius: 100px;
+        height: 14px;
+        width: 14px;
+        margin: 0 2px;
+        font-size: 12px;
+        line-height: 14px;
+        // color: #bcbcbc;
+        border: solid 0.5px #FF786B;
+        &:hover {
+            span {
+                display: block;
+            }
+            border: solid 0.5px #EC3133;
+        }
+        span {
+            display: none;
+        }
+    }
+    .min {
+        vertical-align: middle;
+        background-color: #FFC73B;
+        display: inline-block;
+        border-radius: 100px;
+        height: 14px;
+        width: 14px;
+        margin: 0 2px;
+        font-size: 12px;
+        line-height: 14px;
+        // color: #bcbcbc;
+        border: solid 0.5px #FFC73B;
+        &:hover {
+            span {
+                display: block;
+            }
+            border: solid 0.5px #D58E18;
+        }
+        span {
+            display: none;
+        }
+    }
+    h3 {
+        margin: 10px;
+    }
+}
+
+.input-area {
+    position: relative;
+    // width: 100%;
+    // height: 160px;
+    padding: 15px 10px;
+    textarea.input-lists {
+        width: 100%;
+        height: 130px;
+        background-color: #F6F7F9;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        // padding:2px;
+        -webkit-overflow-scrolling: touch;
+        /* lets it scroll lazy */
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            background-color: #000;
+            // border-radius:2px;
+            // border:1px #c0c0c0 solid;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #F6F7F9;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #D8D8D8;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            // background: rgba(255,0,0,0.8); 
+            @include box-shadow(inset 1px 0 4px rgba(0, 0, 0, 0.1));
+        }
+        &:focus {
+            outline: none;
+            // padding-left:50px;
+            &::-webkit-input-placeholder {
+                padding-left: 10px;
+            }
+            &::-moz-placeholder {
+                padding-left: 10px;
+            }
+            &:-ms-input-placeholder {
+                padding-left: 10px;
+            }
+            &:-moz-placeholder {
+                padding-left: 10px;
+            }
+        }
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            @include transition(padding 200ms ease-in);
+            color: #c0c0c0;
+            padding-left: calc(50% - 60px);
+            font-weight: 400;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            @include transition(padding 200ms ease-in);
+            color: #c0c0c0;
+            padding-left: calc(50% - 60px);
+            font-weight: 400;
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            @include transition(padding 200ms ease-in);
+            color: #c0c0c0;
+            padding-left: calc(50% - 60px);
+            font-weight: 400;
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            @include transition(padding 200ms ease-in);
+            color: #c0c0c0;
+            padding-left: calc(50% - 60px);
+            font-weight: 400;
+        }
+    }
+}
+
+hr {
+    margin: 0px;
+    padding: 0px;
+    color: #EBEBEB;
+    border: 0;
+    border-top: 1px solid #EBEBEB;
+}
+
+.center-info {
+    height: 100px;
+    .lottery-button {
+        display: none;
+    }
+    .confirm-button ,
+    .lottery-button {
+        margin: 15px 10px 5px 10px;
+        width: 380px;
+        height: 50px;
+        background-color: #F5F5F5;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        @include transition(all 200ms ease-in);
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: #EEE;
+            color: #444;
+        }
+    }
+    .switch-tool {
+        text-align: end;
+        padding: 0 10px;
+        .switch {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        h4 {
+            font-weight: 400;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        .re-start {
+            cursor: pointer;
+            vertical-align: middle;
+            height: 18px;
+            width: 18px;
+            background-color: #EEE;
+            border-radius: 50%;
+            border: none;
+            @include transition(all 200ms ease-out);
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                background-color: #FF786B;
+            }
+        }
+    }
+}
+
+.results {
+    padding: 10px;
+    .results-content {
+        height: 250px;
+        // padding:2px;
+        -webkit-overflow-scrolling: touch;
+        /* lets it scroll lazy */
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            background-color: #000;
+            // border-radius:2px;
+            // border:1px #c0c0c0 solid;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #F6F7F9;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #D8D8D8;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            // background: rgba(255,0,0,0.8); 
+            @include box-shadow(inset 1px 0 4px rgba(0, 0, 0, 0.1));
+        }
+        .card {
+            display: block;
+            .name-card {
+                margin-bottom: 10px;
+                margin-right: 10px;
+                background-color: #0084FF;
+                border-radius: 100px;
+                padding: 5px 20px;
+                color: #FFF;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 18px;
+    input {
+        display: none;
+    }
+}
+
+
+/* Hide default HTML checkbox */
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &:before {
+        position: absolute;
+        content: "";
+        height: 10px;
+        width: 10px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+}
+
+input {
+    &:checked + .slider {
+        background-color: #2196F3;
+    }
+    &:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    &:checked + .slider:before {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+    &:before {
+        border-radius: 50%;
+    }
+}

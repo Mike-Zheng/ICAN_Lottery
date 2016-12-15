@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ＮＴＵ小籤桶</title>
+    <link rel="stylesheet" href="assets/mizUI.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="tool-bar">
+            <div id="close-btn" class="close">
+                <span>ｘ</span>
+            </div>
+            <div id="min-btn" class="min">
+                <span>－</span>
+            </div>
+        </div>
+        <h3>小籤桶</h3>
+    </div>
+    <hr style=" margin-top: 50px;">
+    <div class="input-area">
+        <textarea id="inputLists" class="input-lists" placeholder="輸入名單"></textarea>
+    </div>
+    <hr>
+    <div class="center-info">
+        <button id="lotteryButton" class="lottery-button">抽籤</button>
+        <button id="confirmButton" class="confirm-button">確認名單</button>
+        <!-- Rounded switch -->
+        <div class="switch-tool">
+            <label class="switch">
+                <input id="isDuplicate" type="checkbox">
+                <div class="slider round"></div>
+            </label>
+            <h4>重複抽籤</h4>
+            <button id="reStart" class="re-start"></button>
+            <h4>重新開始</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="results">
+        <div id="resultsContent" class="results-content">
+            <!--        <div class="card">
+                <div class="name-card">
+                    #1 鄭麥克
+                </div>
+            </div>
+    -->
+        </div>
+    </div>
+</body>
+<script>
+if (typeof module === 'object') {
+    window.module = module;
+    module = undefined;
+}
+</script>
+<!-- normal script imports etc  -->
+<script src="assets/jquery.js"></script>
+<script src="assets/miz.js"></script>
+<!-- require('./renderer.js') -->
+<!-- Insert this line after script imports -->
+<script>
+if (window.module) module = window.module;
+</script>
+
+</html>
