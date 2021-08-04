@@ -11,7 +11,7 @@
 
 ## Lab Lottery
 
-- **Draw A Lottery** - Lab lottery is a fair lottery app.
+- **Draw A Lottery** - An lottery desktop app written in Electron for NTU ICAN lab. 
 
 
 --------------------------------------
